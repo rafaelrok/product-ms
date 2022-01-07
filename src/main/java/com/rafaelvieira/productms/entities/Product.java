@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "product")
+@Table(name = "tb_product")
 public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -21,7 +21,7 @@ public class Product implements Serializable {
 
     @Column(columnDefinition = "TEXT")
     private String description;
-    private double price;
+    private Double price;
 
     public Product() {
     }
