@@ -9,6 +9,10 @@ import javax.persistence.Table;
 
 import java.io.Serializable;
 
+/**
+ * @author Rafael Vieira
+ */
+
 @Entity
 @Table(name = "tb_product")
 public class Product implements Serializable {

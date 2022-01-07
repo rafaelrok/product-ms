@@ -1,9 +1,13 @@
 package com.rafaelvieira.productms.services.exceptions;
 
-public class DatabaseException extends RuntimeException{
+/**
+ * @author Rafael Vieira
+ */
+
+public class DataBaseException extends RuntimeException{
     private static final long serialVersionUID = 1L;
 
-    public DatabaseException(String msg) {
+    public DataBaseException(String msg) {
         super(msg);
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.EntityNotFoundException;
 import com.rafaelvieira.productms.dto.ProductDTO;
 import com.rafaelvieira.productms.entities.Product;
 import com.rafaelvieira.productms.repositories.ProductRepository;
-import com.rafaelvieira.productms.services.exceptions.DatabaseException;
+import com.rafaelvieira.productms.services.exceptions.DataBaseException;
 import com.rafaelvieira.productms.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -16,6 +16,9 @@ import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * @author Rafael Vieira
+ */
 
 @Service
 public class ProductService {
@@ -71,7 +74,7 @@ public class ProductService {
             throw new ResourceNotFoundException("Id not found " + id);
         }
         catch (DataIntegrityViolationException e) {
-            throw new DatabaseException("Integrity violation");
+            throw new DataBaseException("Integrity violation");
         }
     }
 

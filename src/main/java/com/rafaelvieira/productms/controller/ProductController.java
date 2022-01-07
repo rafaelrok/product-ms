@@ -12,6 +12,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 
+/**
+ * @author Rafael Vieira
+ */
 
 @RestController
 @RequestMapping(value = "/products")
