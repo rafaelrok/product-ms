@@ -16,6 +16,7 @@ import org.springframework.stereotype.Repository;
 public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("FROM Product p " +
             "WHERE LOWER(p.name) like %:searching% " +
-            "OR LOWER(p.description) like %:searching%")
+            "OR LOWER(p.description) like %:searching% " +
+            "OR p.price = :searching ")
     Page<Product> search(@Param("searching") String searching, Pageable pageable);
 }
